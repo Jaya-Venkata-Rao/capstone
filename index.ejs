@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth System</title>
+    <style>
+        /* Reset some basic elements for consistency */
+        body, h1, h2, p, form, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:#e8eef6;
+        }
+
+        /* Set up the body */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #ddd);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Forms section */
+        .forms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        /* Form elements styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .switch-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .switch-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Authentication System</h1>
+        <div class="forms">
+            <% if (showSignup) { %>
+                <div class="form-container">
+                    <h2>Signup</h2>
+                    <form action="/signup" method="POST">
+                        <label for="signup-username">Username:</label>
+                        <input type="text" id="signup-username" name="username" required>
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="password" required>
+                        <button type="submit">Signup</button>
+                    </form>
+                    <button class="switch-button" onclick="window.location.href='/'">Switch to Login</button>
+                </div>
+            <% } else { %>
+                <div class="form-container">
+                    <h2>Login</h2>
+                    <form action="/login" method="POST">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" name="username" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <button class="switch-button" onclick="window.location.href='/signup'">Switch to Signup</button>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
