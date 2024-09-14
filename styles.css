@@ -1,0 +1,210 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #03c651;
+    color: #121111;
+    padding: 10px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #0b0909;
+    text-decoration: none;
+}
+button{
+    background-color:white;
+    color:white;
+    border: 0;
+}
+/* Hero Section */
+.hero {
+    background: url('back.jpg') no-repeat center center/cover;
+    color:white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-style: italic;
+     text-shadow: 0 0 3px #a81212, 0 0 5px #020217;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color:darkgreen;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Flexbox Containers Section */
+#flexbox-containers {
+    padding: 20px;
+    text-align: center;
+}
+
+.flexbox-container {
+    display: flex;
+    gap: 70px;
+    height: 200px;
+    margin-bottom: 20px;
+   
+}
+
+.flexbox-1 {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flexbox-item {
+    color: black;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+/* Individual Flexbox Items with Different Backgrounds */
+.flexbox-item.item1 {
+    background: url('soil.jpeg') no-repeat center center/cover;
+    color:#f4f4f4;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.flexbox-item.item2 {
+    background: url('leaf.jpeg') no-repeat center center/cover;
+    color:#f4f4f4;
+    text-shadow: 0 0 3px #a81212, 0 0 5px #020217;
+} 
+
+.flexbox-item.item3 {
+    background: url('farmers.jpeg') no-repeat center center/cover;
+    color:white ;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.flexbox-item.item4 {
+    background: url('buy_sell.jpeg') no-repeat center center/cover;
+    color: #f4f4f4;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
